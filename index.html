@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="main-screen">
+        <div class="center-block">
+            <p>Выберите файл в формате CSV</p>
+           
+            <label>
+                <input type="file" id="file-input" accept=".csv" style="display: none" onchange="handleFileSelect()">
+
+                <button onclick="handleButtonClick()"><span>Выбрать файл</span></button>
+            </label>
+        </div>
+    </div>
+    
+    <div id="data-view-screen" class="hidden">
+        <button onclick="handleButtonClick()">Загрузить новый файл</button>
+        <table id="data-table">
+            <!-- Таблица будет заполняться динамически -->
+        </table>
+    </div>
+
+    <script src="app.js"></script>  
+</body>
+</html>
